@@ -21,6 +21,7 @@ const client = new MongoClient(uri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
+
 client.connect((err) => {
 	const ServicesCollection = client
 		.db("Bicycle_Master")
@@ -86,7 +87,6 @@ client.connect((err) => {
 	});
 
 	// Get reviews:
-
 	app.get("/reviews", (req, res) => {
 		ReviewsCollection.find({}).toArray((err, documents) => {
 			console.log(documents);

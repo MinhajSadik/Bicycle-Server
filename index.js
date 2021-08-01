@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 require("dotenv").config();
 
-const port = 3003;
+const port = 3300;
 
 app.get("/", (req, res) => {
 	res.send("Hello I am Working Now");
